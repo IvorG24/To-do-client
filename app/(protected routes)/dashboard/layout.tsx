@@ -11,7 +11,6 @@ export const metadata = {
 
 type DashboardLayoutProps = {
   children: ReactNode;
-  tabvalue: String;
 };
 
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
@@ -19,7 +18,6 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
     <>
       <Tabs defaultValue="projects" className="grid grid-cols-7">
         <Dashboardheader />
-
         <section className=" col-span-6 m-10">
           <Card className="h-full p-10">{children}</Card>
         </section>

@@ -9,14 +9,12 @@ export const metadata = {
 
 type DashboardLayoutProps = {
   children: ReactNode;
-  tabvalue: String;
 };
 
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
   return (
     <>
       <HomeHeader />
-
       {children}
       <ModeToggle />
     </>

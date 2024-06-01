@@ -11,11 +11,11 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 interface TaskCardProps {
   id: string;
   content: string;
-  onDragStart: (event: React.DragEvent<HTMLDivElement>, id: string) => void;
+  onDragStart: (event: React.DragEvent<HTMLElement>, id: string) => void;
 }
 
-const TaskCard: React.FC<TaskCardProps> = ({ id, content, onDragStart }) => {
-  const handleDragStart = (event: React.DragEvent<HTMLDivElement>) => {
+const TaskCard = ({ id, content, onDragStart }: TaskCardProps) => {
+  const handleDragStart = (event: React.DragEvent<HTMLElement>) => {
     onDragStart(event, id);
   };
 
